@@ -1,24 +1,31 @@
-#aboutText
+#venstreDiv
 {
-width: 400px;
+width: 250px;
 height: 600px;
 float : left;
 border: 2px solid #080808;
+padding: 10px;
 }
 
-#aboutText1
+#høyreDiv
 {
-width: 400px;
+width: 250px;
 height: 600px;
 float : left;
 border: 2px solid #080808;
+padding: 10px;
 }
 
 #luft
 {
-width: 50px;
+width: 10px;
 height: 600px;
 float:left;
 border: 2px solid #080808;
 
+}
+
+#dialog
+{
+padding: 10px 0px 0px 0px;
 }

@@ -9,12 +9,34 @@
 </head>
 <body>
 
-<button class="buttons" id="button1">Sjekk Evalds Ryghs gate</button></br>
+<div id="intro">
+    <h1>Rekker du bussen? </h1>
+</div>
+
+<div id="top">
+    <label>Velg holdeplass</label>
+
+    <select id="valg">
+        <option value="3010333">Evald Ryghs gate</option>
+        <option value="3010410">Sagene</option>
+        <option value="3010330">Alexander Kiellands plass</option>
+        <option value="3012130">Nydalen T</option>
+        <option value="3012131">Nydalen buss BI</option>
+        <option value="3010427">Badebakken</option>
+        <option value="3012134">Gullhaugveien</option>
+        <option value="3010006">Bjørvika</option>
+        <option value="3010012">Jernbanetorget foran Oslo S</option>
+        <option value="3010013">Jernbanetorget foran Tiger</option>
+        <option value="3010011">Jernbanetorget T</option>
+    </select>
+</div>
+
+<!--<button class="buttons" id="button1">Vis sanntid for valgt holdeplass</button></br>-->
 
 <div id= "dialog">
-    <div id="aboutText"></div>
+    <div id="venstreDiv"></div>
     <div id="luft"></div>
-    <div id="aboutText1"></div>
+    <div id="høyreDiv"></div>
 </div>
 
 <script src="./mainpage.js"></script>
