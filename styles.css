@@ -27,5 +27,16 @@ border: 2px solid #080808;
 
 #dialog
 {
-padding: 10px 0px 0px 0px;
+padding: 22px 0px 0px 0px;
+}
+
+#label{
+float:left;
+}
+
+#valg{
+float:left;
+}
+#form{
+float:left;
 }

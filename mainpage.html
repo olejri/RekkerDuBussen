@@ -14,9 +14,8 @@
 </div>
 
 <div id="top">
-    <label>Velg holdeplass</label>
-
-    <select id="valg">
+    <label id = "label">Velg holdeplass</label>
+    <select id="valg" onchange="nyttValg()">
         <option value="3010333">Evald Ryghs gate</option>
         <option value="3010410">Sagene</option>
         <option value="3010330">Alexander Kiellands plass</option>
@@ -29,7 +28,12 @@
         <option value="3010013">Jernbanetorget foran Tiger</option>
         <option value="3010011">Jernbanetorget T</option>
     </select>
+    <form id ="form">
+        <input id="box1" type="checkbox" name="valg" value="false" />Favoritt <br />
+    </form>
 </div>
+
+
 
 <!--<button class="buttons" id="button1">Vis sanntid for valgt holdeplass</button></br>-->
 

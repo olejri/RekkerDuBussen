@@ -1,6 +1,10 @@
 var test;
 $("document").ready(function() {
-    hentFraRuter();
+    hentFraLocalStorage();
+
+   $("#box1").on("click", function() {
+      settFavoritt();
+    });
 });
 
 function hentFraRuter(){
@@ -69,4 +73,54 @@ function leggTilTekst(holdePlassNummer, diff, avrundet, tidString, publishedLine
                $("#venstreDiv").append("<br> <font color=green>" + tekst + "</font><br>");
             }
          }
+}
+
+
+function settFavoritt(){
+    if(document.getElementById("box1").checked) {
+    var lagretFavoritt = localStorage.getItem('holdeplassid');
+    var nyFavoritt = document.getElementById("valg").value;
+
+    if(lagretFavoritt == null || lagretFavoritt != nyFavoritt){
+        localStorage.setItem('holdeplassid', nyFavoritt);
+    }
+
+    } else {
+    var lagretFavoritt = localStorage.getItem('holdeplassid');
+        var nyFavoritt = document.getElementById("valg").value;
+
+        if(lagretFavoritt == nyFavoritt) {
+        localStorage.setItem('holdeplassid', 'ingen');
+        }
+    }
+}
+
+function nyttValg(){
+    var nyttValg = document.getElementById("valg").value;
+    var lagretFavoritt = localStorage.getItem('holdeplassid');
+
+    if(lagretFavoritt != null && lagretFavoritt != 'ingen' && nyttValg == lagretFavoritt){
+       document.getElementById("box1").checked = true;
+    } else {
+       document.getElementById("box1").checked = false;
+    }
+}
+
+function hentFraLocalStorage(){
+    var lagretFavoritt = localStorage.getItem('holdeplassid');
+    var listeMedHoldeplasser = document.getElementById("valg").options;
+    var antallHoldeplasser = document.getElementById("valg").options.length;
+
+    for (var i = 0; i < antallHoldeplasser; i++) {
+        console.log(listeMedHoldeplasser[i].value);
+        console.log(lagretFavoritt);
+        if(lagretFavoritt == listeMedHoldeplasser[i].value) {
+            console.log("KOMMER INN HIT");
+            listeMedHoldeplasser.selectedIndex = ""+i;
+            document.getElementById("box1").checked = true;
+            continue;
+
+        }
+    }
+    hentFraRuter();
 }
